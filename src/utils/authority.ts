@@ -2,7 +2,7 @@
 export function getAuthority(str?: string): string | string[] {
   // return localStorage.getItem('antd-pro-authority') || ['admin', 'user'];
   const authorityString =
-    typeof str === 'undefined' ? localStorage.getItem('antd-pro-authority') : str;
+    typeof str === 'undefined' ? localStorage.getItem('myauthority') : str;
   // authorityString could be admin, "admin", ["admin"]
   let authority;
   try {
@@ -23,7 +23,7 @@ export function getAuthority(str?: string): string | string[] {
   return authority;
 }
 
-export function setAuthority(authority: string | string[]): void {
+export function setAuthority(authkey:string,authority: string | string[]): void {
   const proAuthority = typeof authority === 'string' ? [authority] : authority;
-  return localStorage.setItem('antd-pro-authority', JSON.stringify(proAuthority));
+  return localStorage.setItem(authkey, JSON.stringify(proAuthority));
 }

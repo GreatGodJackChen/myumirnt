@@ -10,6 +10,7 @@ import { connect } from 'dva';
 import { StateType } from './models/loginmodel';
 import LoginComponents from './components/login/index';
 import styles from './style.less';
+import { FromDataType } from './models/loginmodel'
 
 const { Tab, UserName, Password, Mobile, Captcha, Submit } = LoginComponents;
 
@@ -22,12 +23,12 @@ interface PAGE_NAME_UPPER_CAMEL_CASEState {
   type: string;
   autoLogin: boolean;
 }
-export interface FromDataType {
-  userName: string;
-  password: string;
-  mobile: string;
-  captcha: string;
-}
+//export interface FromDataType {
+//  userName: string;
+//  password: string;
+//  mobile: string;
+//  captcha: string;
+//}
 
 @connect(
   ({

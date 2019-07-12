@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ant-design-pro-master(1)", ".", "{FED74397-BE3B-48BC-A4A0-4BBFA3518D15}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Myumirnt", ".", "{FED74397-BE3B-48BC-A4A0-4BBFA3518D15}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_63867"
-		Debug.AspNetCompiler.PhysicalPath = "..\ant-design-pro-master\"
+		Debug.AspNetCompiler.PhysicalPath = "..\myumirnt\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63867\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_63867"
-		Release.AspNetCompiler.PhysicalPath = "..\ant-design-pro-master\"
+		Release.AspNetCompiler.PhysicalPath = "..\myumirnt\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63867\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "63867"
-		SlnRelativePath = "..\ant-design-pro-master\"
+		SlnRelativePath = "..\myumirnt\"
 	EndProjectSection
 EndProject
 Global

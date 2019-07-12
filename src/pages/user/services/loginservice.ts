@@ -1,13 +1,13 @@
 import request from 'umi-request';
-import { FromDataType } from '../login';
+import { FromDataType } from '../models/loginmodel';
 
 export async function fakeAccountLogin(params: FromDataType) {
-  return request('/api/Auth', {
+  return request('https://localhost:44349/api/Auth', {
     method: 'POST',
     data: params,
   });
 }
 
-//export async function getFakeCaptcha(mobile: string) {
-//  return request(`/api/login/captcha?mobile=${mobile}`);
-//}
+export async function getFakeCaptcha(mobile: string) {
+  return request(`/api/login/captcha?mobile=${mobile}`);
+}
