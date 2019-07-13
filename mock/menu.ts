@@ -5,7 +5,7 @@ export default {
       name: '欢迎',
       path: '/',
       icon: 'smile',
-      component:'/Welcome'
+      component:'./Welcome'
     },
       {
       name: '系统管理',
@@ -13,15 +13,15 @@ export default {
         icon: 'smile',
         component: null,
       children: [{
-        name: '欢迎',
+        name: '欢迎1',
         path: '/user',
         icon: 'smile',
-        component: '/user/index'
+        component: './user/index'
       }, {
-          name: '欢迎',
+          name: '欢迎2',
           path: '/menu',
           icon: 'smile',
-          component: '/menu/index'
+          component: './menu/index'
       }]
       },
    ]

@@ -3,7 +3,7 @@ import { Reducer } from 'redux';
 import { Effect } from './connect';
 import memoizeOne from 'memoize-one';
 import isEqual from 'lodash/isEqual';
-
+import { getAuthority } from '../utils/authority';
 /**
  * 获取面包屑映射
  * @param {Object} menuData 菜单配置

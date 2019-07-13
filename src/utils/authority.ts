@@ -27,3 +27,21 @@ export function setAuthority(authkey:string,authority: string | string[]): void 
   const proAuthority = typeof authority === 'string' ? [authority] : authority;
   return localStorage.setItem(authkey, JSON.stringify(proAuthority));
 }
+
+export function mygetAuthority(str?: string): string | string[] {
+  // return localStorage.getItem('antd-pro-authority') || ['admin', 'user'];
+  const authorityString =localStorage.getItem('myauthority');
+  // authorityString could be admin, "admin", ["admin"]
+  let authority;
+  try {
+    if (authorityString) {
+      authority = JSON.parse(authorityString);
+    }
+  } catch (e) {
+    authority = authorityString;
+  }
+  return authority;
+}
+export function mysetAuthority(authkey: string, authority: string | string[]): void {
+  return localStorage.setItem(authkey, JSON.stringify(authority));
+}

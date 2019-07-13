@@ -56,7 +56,6 @@ PAGE_NAME_UPPER_CAMEL_CASEState
     type: 'account',
     autoLogin: true,
   };
-
   changeAutoLogin = (e: CheckboxChangeEvent) => {
     this.setState({
       autoLogin: e.target.checked,
@@ -121,7 +120,7 @@ PAGE_NAME_UPPER_CAMEL_CASEState
         >
           <Tab key="account" tab={formatMessage({ id: 'BLOCK_NAME.login.tab-login-credentials' })}>
             {status === 'error' &&
-              loginType === 'account' &&
+              type === 'account' &&
               !submitting &&
               this.renderMessage(
                 formatMessage({ id: 'BLOCK_NAME.login.message-invalid-credentials' }),
@@ -152,7 +151,7 @@ PAGE_NAME_UPPER_CAMEL_CASEState
           </Tab>
           <Tab key="mobile" tab={formatMessage({ id: 'BLOCK_NAME.login.tab-login-mobile' })}>
             {status === 'error' &&
-              loginType === 'mobile' &&
+              type === 'mobile' &&
               !submitting &&
               this.renderMessage(
                 formatMessage({ id: 'BLOCK_NAME.login.message-invalid-verification-code' }),

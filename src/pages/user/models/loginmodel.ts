@@ -3,6 +3,7 @@ import { EffectsCommandMap } from 'dva';
 import { routerRedux } from 'dva/router';
 import { fakeAccountLogin, getFakeCaptcha } from '../services/loginservice';
 import { getPageQuery, setAuthority } from '../../../utils/utils';
+import { mysetAuthority, mygetAuthority } from '../../../utils/authority';
 
 export interface FromDataType {
   userName: string;
@@ -11,9 +12,9 @@ export interface FromDataType {
   captcha: string;
 }
 export interface StateType {
-  status?: 'ok' | 'error';
+  status?:string;
   type?: string;
-  currentAuthority?: 'user' | 'guest' | 'admin';
+  data?: string;
 }
 
 export type Effect = (
@@ -42,14 +43,7 @@ const Model: ModelType = {
 
   effects: {
     *login({ payload }, { call, put }) {
-      //try {
-      //  const response = yield call(fakeAccountLogin, payload);
-      //}
-      //catch (e) {
-      //  alert(e);
-      //}
       const response = yield call(fakeAccountLogin, payload);
-      alert(response.status);
       yield put({
         type: 'changeLoginStatus',
         payload: response,
@@ -82,7 +76,7 @@ const Model: ModelType = {
 
   reducers: {
     changeLoginStatus(state, { payload }) {
-      setAuthority("myauthority",payload.currentAuthority);
+      mysetAuthority('myauthority', payload.data);
       return {
         ...state,
         status: payload.status,

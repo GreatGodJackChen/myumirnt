@@ -100,13 +100,25 @@ export default {
       path: '/',
       component: '../layouts/BasicLayout',
       Routes: ['src/pages/Authorized'],
-      authority: ['admin', 'user'],
+     // authority: ['admin', 'user'],
       routes: [
         {
           path: '/',
-          name: 'welcome',
+          name: '欢迎',
           icon: 'smile',
           component: './Welcome',
+        },
+        {
+          path: '/menu',
+          name: '菜单',
+          icon: 'smile',
+          component: './menu/index',
+        },
+        {
+          path: '/user',
+          name: '用户',
+          icon: 'smile',
+          component: './user/index',
         },
         {
           component: './404',

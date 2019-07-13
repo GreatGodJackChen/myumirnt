@@ -99,7 +99,6 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       type: 'global/changeLayoutCollapsed',
       payload,
     });
-
   return (
     <ProLayout
       logo={logo}
